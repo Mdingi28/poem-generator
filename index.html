@@ -3,28 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Poem Generator</title>
-    <link rel="stylesheet" href="src/style.css">
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <title>AI Poem Generator</title>
+    <link rel="stylesheet" href="src/style.css"/>
 </head>
 <body>
     <div class="container">
-        <h1>Welcome to AI Poem Generator</h1>
-        <form id="poem-form">
-            <label for="theme">Choose a theme:</label>
-            <select id="theme" name="theme">
-                <option value="love">Love</option>
-                <option value="nature">Nature</option>
-                <option value="life">Life</option>
-            </select>
-            <button type="submit">Generate Poem</button>
-        </form>
-        <div id="poem-output"></div>
-    </div>
+        <header><h1>AI Poem Generator</h1></header>
+
+        <main>
+        <div class="form-container">
+          <form id="poem-generator-form">
+            <input
+              type="text"
+              placeholder="Enter the topic of a French poem"
+              autofocus
+              required
+              autocomplete="off"
+              class="instructions"
+              id="user-instructions"
+            />
+            <input type="submit" class="submit-button" />
+          </form>
+          <div class="hint">i.e: Roses, Love, Sunset</div>
+        </div>
+        <div class="poem hidden" id="poem"></div>
+      </main>
+
+   
     <footer>
         This project is created by <a href="https://github.com/Mdingi28">Mdingi Sinazo</a>, it's available on <a href="https://github.com/Mdingi28/poem-generator">GitHub</a> and is
       <a href="https://vercel.com/https://ai-poem-generator-ten.vercel.app/" target="_blank"
         >hosted on Vercel</a.
     </footer>
+    </div>
     <script src="src/index.js"></script>
 </body>
 </html>
